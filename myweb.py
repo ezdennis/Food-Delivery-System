@@ -4,10 +4,13 @@ import sqlite3 as lit
 app = Flask(__name__)
 
 
-@app.route('/main')
+@app.route('/main/admin')
+def AdminMainpage():
+    return render_template("AdminMainpage.html")
+
+@app.route('/main/customer')
 def mainpage():
     return render_template("mainpage.html")
-
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -24,7 +27,10 @@ def login():
         r = cursor.fetchall()
         for i in r:
             if(username == i[0] and password == i[1]):
-                return redirect(url_for('mainpage'))
+                if(i[4] == "admin"):
+                    return redirect(url_for('AdminMainpage'))
+                else:
+                    return redirect(url_for('mainpage'))
         else:
             msg = "Please enter valid username and password"
     return render_template('login.html',msg=msg)

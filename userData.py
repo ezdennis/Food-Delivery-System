@@ -9,6 +9,6 @@ cursor = connection.cursor()
 #create username table
 
 command1 = """CREATE TABLE IF NOT EXISTS 
-users(username TEXT,password TEXT,name TEXT,email TEXT)"""
+users(username TEXT,password TEXT,name TEXT,email TEXT,field TEXT)"""
 
 cursor.execute(command1)
