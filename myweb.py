@@ -4,7 +4,7 @@ import sqlite3 as lit
 app = Flask(__name__)
 
 
-@app.route('/main/admin')
+@app.route('/main/AdminMainpage.html')
 def AdminMainpage():
     return render_template("AdminMainpage.html")
 
@@ -44,19 +44,36 @@ def signup():
     password = request.form['psd']
     rname = request.form['nm']
     email = request.form['email']
+    field = "customer"
 
-    print(username + "" + password + "" + rname + "" + email)
+    print(username + "" + password + "" + rname + "" + email + "" + field)
     connection = lit.connect("userdata.db")
     cursor = connection.cursor()
-    query1 = "INSERT INTO users VALUES('{un}','{pd}','{n}','{em}')".format(un=username, pd=password, n=rname, em=email)
+    query1 = "INSERT INTO users VALUES('{un}','{pd}','{n}','{em}', '{f}')".format(un=username, pd=password, n=rname, em=email, f=field)
     cursor.execute(query1)
     connection.commit()
     return render_template("login.html")
 
+@app.route('/main/addfood',methods=['POST'])
+def addfood():
 
-@app.route("/about")
+    fdname = request.form['fdnm']
+    fdprice = request.form['fdpr']
+
+    print(fdname + "" +fdprice)
+    connection = lit.connect("foodData.db")
+    cursor = connection.cursor()
+    query2 = "INSERT INTO food VALUES('{fn}','{fp}')".format(fn=fdname, fp=fdprice)
+    cursor.execute(query2)
+    connection.commit()
+    return render_template("addfood.html")
+
+
+
+@app.route("/main/about.html")
 def about():
     return render_template("about.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

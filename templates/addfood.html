@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <title>AddFood-TheStarDelivery</title>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+	<div class ="logo">
+		<a href="AdminMainpage.html"><h1>The Star Delivery</h1></a>
+	</div>
+  </header>
+
+  <span class="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+  	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="addfood.html">Add food</a>
+		<a href="#">Delete food</a>
+		<a href="about.html">about</a>
+		<a href="#">Setting</a>
+		<a href="#">Logout</a>
+
+	</div>
+
+
+
+  	<div class="main">
+
+		<div class="container">
+
+        <div class="col-md-12 text-center">
+			<h1 class="fontLogin">Add food</h1>
+		</div>
+
+        <form action="http://localhost:5000/main/addfood" method="post">
+            <label for="InputFoodName">foodname</label>
+			<input type="text" name="fdnm" id="InputFoodName" class="form-control" placeholder="Food name" required><br/>
+			<label for="InputPrice">Price</label>
+ 			<input type="text" name="fdpr" id="InputPrice"  class="form-control"  placeholder="Food price" required><br/>
+
+            <div class="col-md-12 text-center ">
+                <p><input type="submit" class="button" value="Add food" /></p>
+            </div>
+        </form>
+
+    </div>
+
+
+  	</div>
+
+	<footer class="footer">
+		<div style="text-align:center;padding:10px;margin-top:7px;">© copyright The Star Delivery</div>
+	</footer>
+
+</body>
+
+	<script>
+		function openNav() {
+  		document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+  		document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+</html>

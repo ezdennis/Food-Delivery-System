@@ -9,83 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <title>SignupPage-TheStarDelivery</title>
-     
-    <style>
-    body {
-  		background-color : lightYellow;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-  		background-size: cover;
-		margin:0;
-		padding:0;
-	}	
-    </style>
-	
-	<style>
-	header{
-	height:60px;
-	background: #262626;
-	padding:0 50px;
-	}
+    <link rel="stylesheet" href="style.css">
 
-	.logo{
-	
-	color:#fff;
-	font-weight:bold;
-	text-transform:uppercase;
-	line-height:60px;
-	font-size:35px;
-	font-family: "Sofia", sans-serif;
-	text-shadow: 0 0 0px white, 0 0 2px yellow;
-	}
 	
 
-	.container{
-	background: lightCyan;
-	color: black;
-	border: double;
-	margin: auto;
-	padding: 20px;
-	width: 300px;
-	height: 500px;
-	align-content: center;
-	}
-	
-	.fontLogin{
-	font-family: "Audiowide", sans-serif;
-	}
-
-	button {
- 	background-color: lightSkyBlue;
-  	border: none;
-  	color: black;
-  	padding: 10px 25px;
-  	text-align: center;
-  	font-size: 12px;
-  	margin: 4px 2px;
-  	opacity: 0.6;
-  	transition: 0.3s;
-	border: 1px solid black;
-	}
-
-	.button:hover {
-	opacity:1
-	}
-	
-	</style>
-	
-	<script>
-    function getInfo(){
-    var username = document.getElementById("InputUsername").value
-    var password = document.getElementById("InputPassword").value
-    if(username == "admin" && password == "admin"){
-        console.log("your username is "+ username + " and your password is "+ password)
-        }else{
-        console.log("wrong username or password")
-        alert("invalid username or wrong password")
-        }
-    }
-    </script>
     
 </head>
 
@@ -115,13 +42,26 @@
 			
             
             <div class="col-md-12 text-center "> 
-                <p><input type="submit" class=""button" value="submit" /></p>
+                <p><input type="submit" class="button" value="submit" /></p>
             </div>
         </form> 
     </div>
     
-    <footer>
-    <p>All Right by The Star Delivery</p>
-    </footer>
+    <footer class="footer">
+		<div style="text-align:center;padding:10px;margin-top:7px;">© copyright The Star Delivery</div>
+	</footer>
 </body>
+
+<script>
+    function getInfo(){
+    var username = document.getElementById("InputUsername").value
+    var password = document.getElementById("InputPassword").value
+    if(username == "admin" && password == "admin"){
+        console.log("your username is "+ username + " and your password is "+ password)
+        }else{
+        console.log("wrong username or password")
+        alert("invalid username or wrong password")
+        }
+    }
+    </script>
 </html>

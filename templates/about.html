@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,137 +11,22 @@
 
     <title>About-MyStarDelivery</title>
 
-	<style>
-	body {
-  		background-image: url('back1.jpg');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-  		background-size: cover;
-		margin:0;
-		padding:0;
-	}
-    	</style>
+    <link rel="stylesheet" href="style.css">
 
-	<style>
-	header{
-	height:60px;
-	background: #262626;
-	padding:0 50px;
-	}
+</head>
 
-	.logo{
-	width:30%;
-	color:#fff;
-	font-weight:bold;
-	text-transform:uppercase;
-	line-height:60px;
-	font-size:35px;
-	font-family:"Sofia",sans-serif;
-	text-shadow: 0 0 0px white, 0 0 2px yellow;
-	}
-
-	.menu {
-    width: 25%;
-     float: left;
-     padding: 15px;
-    border: 1px solid red;
-    }
-
-    .main {
-     width: 75%;
-    float: left;
-    padding: 15px;
-    border: 1px solid red;
-    }
-
-    .footer{
-    position: fixed;
-    bottom:0;
-    width: 300px
-    }
-
-	nav{
-	width:68%
-	float:right;
-	}
-
-	nav ul{
-	list-style:none;
-	float:right;
-	}
-
-	nav ul li{
-	display: inline-block;
-	}
-
-	nav ul li a{
-	text-decoration: none;
-	color:#fff;
-	font-family:sans-serif;
-	font-weight:bold;
-	margin: 0 10px;
-	line-height:60px;
-	text-transform;
-	}
-
-	</style>
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-
-  </head>
-
-  <body>
+<body>
   <header>
 	<div class ="logo">
-		<a href="mainpage.html"><h1>TheStarDelivery</h1></a>
+		<a href="AdminMainpage.html"><h1>TheStarDelivery</h1></a>
+    </div>
   </header>
 
-  <span class="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+    <span class="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Add food</a>
+        <a href="addfood.html">Add food</a>
 	    <a href="#">Edit food</a>
 	    <a href="#">Delete food</a>
 	    <a href="#">Cart</a>
@@ -160,23 +45,20 @@ body {
         in the USA and the UK to complete deliveries.</p>
   </div>
 
-
-
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-
-
-
 	<footer class="footer">
-	    <p>All Right Reserved by The Star Delivery</p>
+		<div style="text-align:center;padding:10px;margin-top:7px;">© copyright The Star Delivery</div>
 	</footer>
-  </body>
+
+</body>
+
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
 </html>

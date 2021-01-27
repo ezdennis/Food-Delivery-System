@@ -74,18 +74,7 @@
 	
 	</style>
 	
-	<script>
-    function getInfo(){
-    var username = document.getElementById("InputUsername").value
-    var password = document.getElementById("InputPassword").value
-    if(username == "admin" && password == "admin"){
-        console.log("your username is "+ username + " and your password is "+ password)
-        }else{
-        console.log("wrong username or password")
-        alert("invalid username or wrong password")
-        }
-    }
-    </script>
+
     
 </head>
 
@@ -105,26 +94,46 @@
 		
         <form action="http://localhost:5000/login" method="post">
             <label for="InputUsername">Username</label>
-			<input type="text" name="name" id="InputUsername" class="form-control" placeholder="Enter username" required>
+			<input type="text" name="name" id="InputUsername" class="form-control" placeholder="Enter username" >
 			<label for="InputPassword">Password</label>
- 			<input type="password" name="password" id="InputPassword"  class="form-control"  placeholder="Enter Password" required><br/>
+ 			<input type="password" name="password" id="InputPassword"  class="form-control"  placeholder="Enter Password" ><br/>
 			<label>
             <input type="checkbox" checked="checked" name="remember"> Remember me	
             </label><br/>
 			<span class="psw">Forgot <a href="#">password?</a></span>
             
-            <div class="col-md-12 text-center "> 
-                <p><input type="submit" class=""button" value="submit" /></p>
-            
+            <div class="col-md-12 text-center ">
+                <button type="submit" class="button" oncclick="getInfo()">Submit</button>
                 <hr>
                 <span class="span-or"><center>or</center></span><br/>
-                <input type="submit"  class="button" value="register" /></p>
+
             </div>
-        </form> 
+
+            <div class="col-md-12 text-center">
+            <button type="button" class="button" onclick="redirectToSignup()">Register</button>
+            </div>
+        </form>
     </div>
     
     <footer>
     <p>All Right by The Star Delivery</p>
     </footer>
 </body>
+<script>
+    function getInfo(){
+    var username = document.getElementById("InputUsername").value
+    var password = document.getElementById("InputPassword").value
+    }
+
+        if(username == "admin" && password == "admin"){
+        console.log("your username is "+ username + " and your password is "+ password)
+        }else{
+        console.log("wrong username or password")
+        alert("invalid username or wrong password")
+        }
+
+    function redirectToSignup(){
+    location.replace("http://localhost:63342/delivery/templates/signup.html?_ijt=rk0fa5e9m8aeok25tv592grs2i")
+    }
+</script>
 </html>
